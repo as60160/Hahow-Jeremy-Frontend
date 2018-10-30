@@ -38,7 +38,37 @@
 
 	<script>
 		$(function() {
+			$('#calc').click(function() {
+				var h = $('#height').val(),  // 設定 h 為身高的變數
+				    w = $('#weight').val();  // 設定 W 為體重的變數
 
+				if ( h == '' ) {
+					alert('請輸入身高');
+				}
+				else if ( w == '' ) {
+					alert('請輸入體重');
+				}
+				else if ( h > 3 ) {
+					alert('請確認身高的單位是否正確');
+				}
+				else if ( w < 10 ) {
+					alert('請確認體重是否正確');
+				}
+				else {
+					var bmi = w / ( h * h );
+					$('#result').val(formatFloat(bmi,2)); // 回傳結果並取小數點第 2 位
+					$('#height').val('');  //清空身高欄位
+					$('#weight').val('');  //清空體重欄位
+				}
+
+			// 取小數點位數的函數
+		    function formatFloat(num, pos) {
+		      var size = Math.pow(10, pos);
+		      return Math.round(num * size) / size;
+		    }
+
+
+			});
 		});
 	</script>
 
@@ -104,7 +134,7 @@
 		<!-- 計算按鈕 -->
 		<div class="col-md-1 button">
 			<form >
-			  <button type="button" class="btn btn-primary">計算</button>		
+			  <button type="button" class="btn btn-primary" id="calc">計算</button>		
 			</form>
 		</div>
 
