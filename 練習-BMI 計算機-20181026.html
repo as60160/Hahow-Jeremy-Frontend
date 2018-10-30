@@ -13,12 +13,118 @@
     <script src="library/jquery-3.3.1.js"></script>
     <script src="library/js/bootstrap.js"></script>
 
+	<style>
+		.container-fluid {
+			font-family: '微軟正黑體';
+			padding-left:0pt ;
+			padding-right:0pt ;
+		}
+
+		.row {
+			font-family: '微軟正黑體';
+			padding-left:40pt ;
+			padding-right:40pt ;
+			padding-top:40pt ;
+		}
+
+		.button {
+			padding-top:23pt ;
+			padding-bottom:20pt ;
+		}
+
+	</style>
+
+
+
+	<script>
+		$(function() {
+
+		});
+	</script>
+
+
+
 </head>
 <body>
-	
+	<div class="container-fluid">
+		
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+		  
+		  <!-- navbar-brand -->
+		  <a class="navbar-brand" href="#">BMI 計算機</a>
+		  
+		  <!-- navbar toggler for RWD -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <!-- navbar-collapse -->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+			<!-- nav-items -->
+		    <ul class="navbar-nav mr-auto">
+
+		      <!-- About -->
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+		      </li>
+
+		    </ul>  <!-- /.nav-items -->
+		  </div>  <!-- /.navbar-collapse -->
+		</nav>  <!-- /.navbar -->
+	</div> <!-- /.container-fluid -->
 
 
 
+
+	<!-- content -->
+	<div class="row">
+
+		<!-- 身高 -->
+		<div class="col-md-4">
+			<form >
+			  <div class="form-group">
+			    <label for="height">身高 (m)</label>
+			    <input type="number" class="form-control" id="height" placeholder="請輸入身高">
+			  </div>				
+			</form>
+		</div>
+
+		<!-- 體重 -->
+		<div class="col-md-4">
+			<form >
+			  <div class="form-group">
+			    <label for="weight">體重 (kg)</label>
+			    <input type="number" class="form-control" id="weight" placeholder="請輸入體重">
+			  </div>				
+			</form>
+		</div>
+
+		<!-- 計算按鈕 -->
+		<div class="col-md-1 button">
+			<form >
+			  <button type="button" class="btn btn-primary">計算</button>		
+			</form>
+		</div>
+
+		<!-- 顯示結果 -->
+		<div class="col-md-3">
+			<form >
+			  <div class="form-group">
+			    <label for="bmi">您的 BMI 為：</label>
+			    <input type="button" class="form-control" id="result" readonly="true">
+			    <small>BMI = 體重 (kg) / 身高<sup>2</sup> (m<sup>2</sup>)</small>
+			  </div>				
+			</form>
+		</div>
+
+
+
+	</div>
+
+
+<!-- 想解決的問題：計算按鈕如何置中 -->
 
 </body>
 </html>
