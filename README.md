@@ -4,4 +4,7 @@
 老師：Jeremy Yen <br>
 
 ## 實作 ─ BMI 計算機
-使用：Bootstrap、jQuery <br>
+使用：Bootstrap、jQuery、RWD <br>
+
+## 實作 ─ 網站後台儀表板
+使用：Bootstrap、Highchart <br>
