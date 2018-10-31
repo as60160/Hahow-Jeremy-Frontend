@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>BMI 計算機</title>
+	<title>體脂率計算器</title>
 
 	<!-- 行動裝置支援 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,16 +20,28 @@
 		padding-right:0pt ;
 	}
 
+	.first-row-top {
+		margin-top: 60pt ;
+	}
+
 	.row {
 		font-family: '微軟正黑體';
+		margin-left: 10pt ;
+		margin-right: 10pt ;
 		padding-left:40pt ;
 		padding-right:40pt ;
-		padding-top:40pt ;
+		padding-top:0pt ;
 	}
 
 	.button {
 		padding-top:23pt ;
 		padding-bottom:20pt ;
+	}
+	.card {
+		font-family: '微軟正黑體';
+		margin-left: 10pt ;
+		margin-right: 10pt ;
+		margin-top: 20pt ;
 	}
 	</style>
 
@@ -74,13 +86,14 @@
 
 
 <body>
+
 	<div class="container-fluid">
 		
 		<!-- navbar -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
 		  
 		  <!-- navbar-brand -->
-		  <a class="navbar-brand" href="#">BMI 計算機</a>
+		  <a class="navbar-brand" href="#">體脂率計算器</a>
 		  
 		  <!-- navbar toggler for RWD -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +107,7 @@
 			<ul class="navbar-nav mr-auto">
 
 		      <!-- About -->
-		      <li class="nav-item active">
+		      <li class="nav-item active ">
 		        <a class="nav-link" href="https://hahow.in/courses/56c1e3b3e91d590900234105/discussions" target="blank">About<span class="sr-only">(current)</span></a>
 		      </li>
 
@@ -106,11 +119,11 @@
 
 
 
-	<!-- row content -->
-	<div class="row">
+	<!-- first-row -->
+	<div class="row first-row-top">
 
 		<!-- 身高 -->
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
 				<label for="height">身高 (m)</label>
@@ -120,7 +133,7 @@
 		</div>
 
 		<!-- 體重 -->
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
 				<label for="weight">體重 (kg)</label>
@@ -129,15 +142,38 @@
 			</form>
 		</div>
 
-		<!-- 計算按鈕 -->
-		<div class="col-md-1 button">
+		<!-- 年齡 -->
+		<div class="col-md-3">
 			<form >
-				<button type="button" class="btn btn-primary" id="calc">計算</button>		
+			  <div class="form-group">
+				<label for="age">年齡</label>
+				<input type="number" class="form-control" id="age" placeholder="請輸入年齡">
+			  </div>				
 			</form>
 		</div>
 
-		<!-- 顯示結果 -->
+		<!-- 性別 -->
 		<div class="col-md-3">
+			<form >
+			  <div class="form-group">
+				<label for="sex">性別</label>
+				<select class="form-control">
+				  <option id="male">男性 Male</option>
+				  <option id="female">女性 Female</option>
+				</select>
+			  </div>				
+			</form>
+		</div>
+
+	</div>  <!-- /.first-row -->
+
+
+
+	<!-- second-row -->
+	<div class="row">
+
+		<!-- BMI 結果 -->
+		<div class="col-md-6">
 			<form >
 			  <div class="form-group">
 				<label for="bmi">您的 BMI 為：</label>
@@ -147,7 +183,75 @@
 			</form>
 		</div>
 
-	</div>  <!-- /.row content -->
+		<!-- 體脂率結果 -->
+		<div class="col-md-6">
+			<form >
+			  <div class="form-group">
+				<label for="body-fat">您的體脂率為：</label>
+				<input type="button" class="form-control" id="body-fat" readonly="true">
+			  </div>				
+			</form>
+		</div>
+
+	</div> 
+
+
+
+	<!-- third-row -->
+	<div class="row">
+		
+		<!-- 計算按鈕 -->
+		<div class="col-md-1 button">
+			<form >
+				<button type="button" class="btn btn-primary" id="calc">計算</button>
+			</form>
+		</div>
+
+		<!-- 清空按鈕 -->
+		<div class="col-md-1 button">
+			<form >
+				<button type="button" class="btn btn-outline-primary" id="clear">清空</button>	
+			</form>
+		</div>
+
+
+
+	<!-- 體脂率介紹及說明內文 -->
+	<div class="card">
+		<div class="card-body">
+
+			<h3 class="card-title"><a href="https://www.wikiwand.com/zh/%E9%AB%94%E8%84%82%E8%82%AA%E7%8E%87" target="blank">體脂率</a></h3><br>
+
+
+			<h4 class="card-title">簡介</h4>
+			<p class="card-text">
+				於動物來說，體脂百分比的計算法是把動物體重中的脂肪部分重量與整個身體的分量相除，再乘以100%，脂肪包含必需脂肪酸 (essential fat) 及儲存脂肪 (storage fat)。 
+			</p>
+			<p class="card-text">
+				一般而言，女性的必需脂肪比例會比男性為高，因為需要生育、餵哺及其他由荷爾蒙調節的身體機能。對於男性，必需脂肪一般佔體重的2～5%，而女性約為10～13%。
+			</p>
+			<br>
+
+
+			<h4 class="card-title">標準</h4>
+			<p class="card-text">
+				一般認為男性體脂>25%，女性>30%是診斷為肥胖的標準。
+			</p>
+			<br>
+
+
+			<h4 class="card-title">公式</h4>
+			<p class="card-text">
+				體脂率 = (1.2 * BMI) + (0.23 * 年齡 - 5.4) - (10.8 * 性別)
+			</p>
+			<p class="card-text"><small>
+				* 其中男性性別取值為 1，女性取值為 0。
+			</small>
+			</p>
+		</div>  <!-- /.card-body -->
+	</div>  <!-- /.card -->
+
+
 
 
 </body>
