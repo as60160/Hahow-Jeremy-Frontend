@@ -14,35 +14,40 @@
 	<script src="library/js/bootstrap.js"></script>
 
 	<style>
-	.container-fluid {
+
+	body {
 		font-family: '微軟正黑體';
+	}
+
+	.container-fluid {
 		padding-left:0pt ;
 		padding-right:0pt ;
 	}
 
-	.first-row-top {
+	.card {
+		margin-left: 50pt ;
+		margin-right: 50pt ;
 		margin-top: 60pt ;
 	}
 
+	.first-row-top {
+		margin-top: 0pt ;
+	}
+
 	.row {
-		font-family: '微軟正黑體';
 		margin-left: 10pt ;
 		margin-right: 10pt ;
 		padding-left:40pt ;
 		padding-right:40pt ;
-		padding-top:0pt ;
+		padding-top:20pt ;
 	}
 
 	.button {
-		padding-top:23pt ;
-		padding-bottom:20pt ;
+		margin-top:10pt ;
+		margin-bottom: 30pt ;
+		padding-bottom: 0pt ;
 	}
-	.card {
-		font-family: '微軟正黑體';
-		margin-left: 10pt ;
-		margin-right: 10pt ;
-		margin-top: 20pt ;
-	}
+
 	</style>
 
 
@@ -118,6 +123,41 @@
 
 
 
+	<!-- 體脂率介紹及說明內文 -->
+	<div class="card">
+		<div class="card-body">
+
+			<h2 class="card-title"><a href="https://www.wikiwand.com/zh/%E9%AB%94%E8%84%82%E8%82%AA%E7%8E%87" target="blank">體脂率</a></h2>
+			<hr>
+
+			<!-- 體脂率簡介 -->
+			<h3 class="card-title"><strong>簡介</strong></h3>
+			<p class="card-text">
+				於動物來說，體脂百分比的計算法是把動物體重中的脂肪部分重量與整個身體的分量相除，再乘以100%，脂肪包含必需脂肪酸 (essential fat) 及儲存脂肪 (storage fat)。 
+				一般而言，女性的必需脂肪比例會比男性為高，因為需要生育、餵哺及其他由荷爾蒙調節的身體機能。對於男性，必需脂肪一般佔體重的2～5%，而女性約為10～13%。
+			</p>
+			<br>
+
+			<!-- 體脂率標準 -->
+			<h3 class="card-title"><strong>標準</strong></h3>
+			<p class="card-text">
+				一般認為男性體脂>25%，女性>30%是診斷為肥胖的標準。
+			</p>
+			<br>
+
+			<!-- 體脂率公式 -->
+			<h3 class="card-title"><strong>公式</strong></h3>
+			<p class="card-text">
+				體脂率 = (1.2 * BMI) + (0.23 * 年齡 - 5.4) - (10.8 * 性別)
+			</p>
+			<p class="card-text"><small>
+				* 其中男性性別取值為 1，女性取值為 0。
+			</small>
+			</p>
+		</div>  <!-- /.card-body -->
+	</div>  <!-- /.card -->
+
+
 
 	<!-- first-row -->
 	<div class="row first-row-top">
@@ -172,22 +212,42 @@
 	<!-- second-row -->
 	<div class="row">
 
-		<!-- BMI 結果 -->
-		<div class="col-md-6">
+		<!-- BMI 數值 -->
+		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="bmi">您的 BMI 為：</label>
+				<label for="bmi">您的 BMI 數值為：</label>
 				<input type="button" class="form-control" id="result" readonly="true">
 				<small>BMI = 體重 (kg) / 身高<sup>2</sup> (m<sup>2</sup>)</small>
 			  </div>				
 			</form>
 		</div>
 
-		<!-- 體脂率結果 -->
-		<div class="col-md-6">
+		<!-- 體脂率數值 -->
+		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="body-fat">您的體脂率為：</label>
+				<label for="body-fat">您的體脂率數值為：</label>
+				<input type="button" class="form-control" id="body-fat" readonly="true">
+			  </div>				
+			</form>
+		</div>
+
+		<!-- BMI 標準 -->
+		<div class="col-md-3">
+			<form >
+			  <div class="form-group">
+				<label for="bmi">BMI 標準：</label>
+				<input type="button" class="form-control" id="result" readonly="true">
+			  </div>				
+			</form>
+		</div>
+
+		<!-- 體脂率標準 -->
+		<div class="col-md-3">
+			<form >
+			  <div class="form-group">
+				<label for="body-fat">體脂率標準：</label>
 				<input type="button" class="form-control" id="body-fat" readonly="true">
 			  </div>				
 			</form>
@@ -216,40 +276,6 @@
 
 
 
-	<!-- 體脂率介紹及說明內文 -->
-	<div class="card">
-		<div class="card-body">
-
-			<h3 class="card-title"><a href="https://www.wikiwand.com/zh/%E9%AB%94%E8%84%82%E8%82%AA%E7%8E%87" target="blank">體脂率</a></h3><br>
-
-
-			<h4 class="card-title">簡介</h4>
-			<p class="card-text">
-				於動物來說，體脂百分比的計算法是把動物體重中的脂肪部分重量與整個身體的分量相除，再乘以100%，脂肪包含必需脂肪酸 (essential fat) 及儲存脂肪 (storage fat)。 
-			</p>
-			<p class="card-text">
-				一般而言，女性的必需脂肪比例會比男性為高，因為需要生育、餵哺及其他由荷爾蒙調節的身體機能。對於男性，必需脂肪一般佔體重的2～5%，而女性約為10～13%。
-			</p>
-			<br>
-
-
-			<h4 class="card-title">標準</h4>
-			<p class="card-text">
-				一般認為男性體脂>25%，女性>30%是診斷為肥胖的標準。
-			</p>
-			<br>
-
-
-			<h4 class="card-title">公式</h4>
-			<p class="card-text">
-				體脂率 = (1.2 * BMI) + (0.23 * 年齡 - 5.4) - (10.8 * 性別)
-			</p>
-			<p class="card-text"><small>
-				* 其中男性性別取值為 1，女性取值為 0。
-			</small>
-			</p>
-		</div>  <!-- /.card-body -->
-	</div>  <!-- /.card -->
 
 
 
