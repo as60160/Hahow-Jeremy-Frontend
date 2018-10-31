@@ -13,6 +13,7 @@
 	<script src="library/jquery-3.3.1.js"></script>
 	<script src="library/js/bootstrap.js"></script>
 
+
 	<style>
 
 	body {
@@ -56,13 +57,19 @@
 		$(function() {
 			$('#calc').click(function() {
 				var h = $('#height').val(),  // 設定 h 為身高的變數
-				    w = $('#weight').val();  // 設定 W 為體重的變數
+				    w = $('#weight').val(),  // 設定 W 為體重的變數
+				    a = $('#age').val(),     // 設定 a 為年齡的變數
+					s = $('#sex').val();     // 設定 s 為性別的變數
+
 
 				if ( h == '' ) {
 					alert('請輸入身高');
 				}
 				else if ( w == '' ) {
 					alert('請輸入體重');
+				}
+				else if ( a == '' ) {
+					alert('請輸入年齡');
 				}
 				else if ( h > 3 ) {
 					alert('請確認身高的單位是否正確');
@@ -71,11 +78,29 @@
 					alert('請確認體重是否正確');
 				}
 				else {
+					
+					// 計算並回傳 BMI 數值，取到小數點第 2 位
 					var bmi = w / ( h * h );
-					$('#result').val(formatFloat(bmi,2)); // 回傳結果並取小數點第 2 位
-					$('#height').val('');  //清空身高欄位
-					$('#weight').val('');  //清空體重欄位
+					$('#bmi-num').val(formatFloat(bmi,2));  
+
+					// 計算並回傳體脂率數值，取到小數點第 2 位
+					var bodyfat = ( 1.2 * bmi ) + ( 0.23 * a -5.4 ) - ( 10.8 * s );
+					$('#body-fat-num').val(formatFloat(bodyfat,2)); 
 				}
+
+
+				// 判斷 BMI 是否在標準範圍內
+				if ( bmi < 18.5 ) {
+					$('#bmi-std').text('過輕');
+				}
+				else if ( bmi > 24 ) {
+					$('#bmi-std').text('過重');
+				}
+				else {
+					$('#bmi-std').text('標準');
+				}
+
+
 
 				// 取小數點位數的函數
 				function formatFloat(num, pos) {
@@ -197,9 +222,9 @@
 			<form >
 			  <div class="form-group">
 				<label for="sex">性別</label>
-				<select class="form-control">
-				  <option id="male">男性 Male</option>
-				  <option id="female">女性 Female</option>
+				<select class="form-control" id="sex">
+				  <option id="male" value="1">男性 Male</option>
+				  <option id="female" value="0">女性 Female</option>
 				</select>
 			  </div>				
 			</form>
@@ -216,8 +241,8 @@
 		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="bmi">您的 BMI 數值為：</label>
-				<input type="button" class="form-control" id="result" readonly="true">
+				<label for="bmi-num">您的 BMI 數值為：</label>
+				<input type="number" class="form-control" id="bmi-num" readonly="true">
 				<small>BMI = 體重 (kg) / 身高<sup>2</sup> (m<sup>2</sup>)</small>
 			  </div>				
 			</form>
@@ -227,8 +252,8 @@
 		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="body-fat">您的體脂率數值為：</label>
-				<input type="button" class="form-control" id="body-fat" readonly="true">
+				<label for="body-fat-num">您的體脂率數值為：</label>
+				<input type="number" class="form-control" id="body-fat-num" readonly="true">
 			  </div>				
 			</form>
 		</div>
@@ -237,8 +262,8 @@
 		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="bmi">BMI 標準：</label>
-				<input type="button" class="form-control" id="result" readonly="true">
+				<label for="bmi-std">BMI 標準：</label>
+				<input type="text" class="form-control" id="bmi-std" readonly="true">
 			  </div>				
 			</form>
 		</div>
@@ -247,8 +272,8 @@
 		<div class="col-md-3">
 			<form >
 			  <div class="form-group">
-				<label for="body-fat">體脂率標準：</label>
-				<input type="button" class="form-control" id="body-fat" readonly="true">
+				<label for="body-fat-std">體脂率標準：</label>
+				<input type="text" class="form-control" id="body-fat-std" readonly="true">
 			  </div>				
 			</form>
 		</div>
@@ -270,7 +295,7 @@
 		<!-- 清空按鈕 -->
 		<div class="col-md-1 button">
 			<form >
-				<button type="button" class="btn btn-outline-primary" id="clear">清空</button>	
+				<button type="reset" class="btn btn-outline-primary" id="reset">清空</button>	
 			</form>
 		</div>
 
