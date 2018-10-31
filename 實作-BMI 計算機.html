@@ -60,19 +60,19 @@
 					$('#weight').val('');  //清空體重欄位
 				}
 
-			// 取小數點位數的函數
-		    function formatFloat(num, pos) {
-		      var size = Math.pow(10, pos);
-		      return Math.round(num * size) / size;
-		    }
+				// 取小數點位數的函數
+				function formatFloat(num, pos) {
+					var size = Math.pow(10, pos);
+					return Math.round(num * size) / size;
+				}
 
 			});
 		});
 	</script>
 
-
-
 </head>
+
+
 <body>
 	<div class="container-fluid">
 		
@@ -106,7 +106,7 @@
 
 
 
-	<!-- content -->
+	<!-- row content -->
 	<div class="row">
 
 		<!-- 身高 -->
@@ -147,9 +147,7 @@
 			</form>
 		</div>
 
-
-
-	</div>
+	</div>  <!-- /.row content -->
 
 
 <!-- 想解決的問題：計算按鈕如何置中 -->
