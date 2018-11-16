@@ -47,6 +47,7 @@
 3. 考慮防呆設計（例如防止使用者忘記輸入，或未先計算 BMI 就想算體脂肪率）
 4. 使用 Git 管理，最後發佈到 Github Page（參考單元10），繳交個人 github.io 網址 (盡量不要直接打包 zip 上傳)
 5. 程式碼內適時加上註解更佳
+<br>
 
 * 我嘗試：
 1. 使用 `fixed-top` 固定 navbar 的位置，讓它不會隨著捲動而消失。
@@ -55,7 +56,7 @@
 <br>
 
 * 我學到：
-1. Tag ： `card`、`fixed-top`、`hr`、
+1. `card`、`fixed-top`、`hr`、
 2. 使用 `fixed-top` 固定 navbar 的位置時，要拉大 navbar 底部和 div 上方的距離，div 的內容才不會被重疊。
 3. 學會使用 form select 來製作下拉選單，並且用 value 來為選項設定值。
 
