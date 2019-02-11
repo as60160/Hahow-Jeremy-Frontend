@@ -1,7 +1,9 @@
-﻿# Hahow-前端網頁設計入門
+﻿<style> * {font-family: 微軟正黑體;} </style>
+
+# Hahow-前端網頁設計入門
 平台：Hahow <br>
-課程：[創業必備：前端網頁設計入門](https://hahow.in/courses/56c1e3b3e91d590900234105/discussions) <br>
 老師：Jeremy Yen <br>
+課程：[創業必備：前端網頁設計入門](https://hahow.in/courses/56c1e3b3e91d590900234105/discussions) <br>
 <br>
 
 
@@ -35,11 +37,7 @@
 連結：[體脂率計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E4%BD%9C%E6%A5%AD-%E9%AB%94%E8%84%82%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
 
 * 作業詳細要求：
-1. 先完成一個 BMI 計算器後，在下方新增四個元件。元件樣式可自訂或使用 Bootstrap 樣式。 分別是
-	* 年齡(input:number)
-	* 性別(select)
-	* 體脂肪率(input readonly) 
-	* 一個計算按鈕
+1. 先完成一個 BMI 計算器後，在下方新增四個元件(年齡、性別、體脂肪率、計算按鈕)。元件樣式可自訂或使用 Bootstrap 樣式。
 2. 撰寫計算體脂肪率的 JavaScript，可使用 jQuery 輔助。
 3. 考慮防呆設計（例如防止使用者忘記輸入，或未先計算 BMI 就想算體脂肪率）
 4. 使用 Git 管理，最後發佈到 Github Page（參考單元10），繳交個人 github.io 網址 (盡量不要直接打包 zip 上傳)
