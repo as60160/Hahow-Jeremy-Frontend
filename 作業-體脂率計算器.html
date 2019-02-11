@@ -80,27 +80,28 @@
 					// 計算並回傳 BMI 數值，取到小數點第 2 位
 					var bmi = w / ( h * h );
 					$('#bmi-num').val(formatFloat(bmi,2));  
+					bmistd(bmi);
 
 					// 計算並回傳體脂率數值，取到小數點第 2 位
 					var bodyfat = ( 1.2 * bmi ) + ( 0.23 * a -5.4 ) - ( 10.8 * s );
 					$('#body-fat-num').val(formatFloat(bodyfat,2)); 
+
 				}
 
 
 				// 判斷 BMI 是否在標準範圍內
-				if ( bmi < 18.5 ) {
-					alert('BMI 過輕');
-					$('#bmi-std').text('過輕');
-				}
-				else if ( bmi > 24 ) {
-					alert('BMI 過重');
-					$('#bmi-std').text('過重');
-				}
-				else {
-					alert('BMI 標準');
-					$('#bmi-std').text('標準');
-				}
+				function bmistd(n) {
+					if (n < 18.5) {
+						$('#bmi-std').text('過輕');
+					}
+					else if (n > 24) {
+						$('#bmi-std').text('過重');
+					}
+					else {
+						$('#bmi-std').text('標準');
+					}
 
+				}
 
 
 				// 取小數點位數的函數
