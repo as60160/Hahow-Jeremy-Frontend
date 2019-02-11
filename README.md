@@ -2,6 +2,7 @@
 平台：Hahow <br>
 老師：Jeremy Yen <br>
 課程：[創業必備：前端網頁設計入門](https://hahow.in/courses/56c1e3b3e91d590900234105/discussions) <br>
+github page：[https://as60160.github.io/Hahow-Jeremy-Frontend/](https://as60160.github.io/Hahow-Jeremy-Frontend/) <br>
 <br>
 
 
@@ -45,6 +46,7 @@
 * 我嘗試：
 1. 使用 `fixed-top` 固定 navbar 的位置，讓它不會隨著捲動而消失。
 2. 使用 `card` 來呈現內容。
+3. 用 `max-width` 去限制內容的最大寬度。
 <br>
 
 * 我學到：
