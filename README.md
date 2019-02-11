@@ -2,13 +2,13 @@
 平台：Hahow <br>
 老師：Jeremy Yen <br>
 課程：[創業必備：前端網頁設計入門](https://hahow.in/courses/56c1e3b3e91d590900234105/discussions) <br>
-github page：[https://as60160.github.io/Hahow-Jeremy-Frontend/](https://as60160.github.io/Hahow-Jeremy-Frontend/) <br>
+Github page：[https://as60160.github.io/Hahow-Jeremy-Frontend/](https://as60160.github.io/Hahow-Jeremy-Frontend/) <br>
 <br>
 
 
 ## 練習 ─ BMI 計算器
 使用：Bootstrap、jQuery、RWD <br>
-連結：[BMI 計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E7%B7%B4%E7%BF%92-BMI%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
+Github page：[BMI 計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E7%B7%B4%E7%BF%92-BMI%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
 
 * 我嘗試：
 1. 將 navbar 使用的 `navbar-light bg-light` 改為 `navbar-dark bg-dark`
@@ -33,7 +33,7 @@ github page：[https://as60160.github.io/Hahow-Jeremy-Frontend/](https://as60160
 
 ## 作業 ─ 體脂率計算器
 使用：Bootstrap、jQuery、RWD <br>
-連結：[體脂率計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E4%BD%9C%E6%A5%AD-%E9%AB%94%E8%84%82%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
+Github page：[體脂率計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E4%BD%9C%E6%A5%AD-%E9%AB%94%E8%84%82%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
 
 * 作業詳細要求：
 1. 先完成一個 BMI 計算器後，在下方新增四個元件(年齡、性別、體脂肪率、計算按鈕)。元件樣式可自訂或使用 Bootstrap 樣式。
