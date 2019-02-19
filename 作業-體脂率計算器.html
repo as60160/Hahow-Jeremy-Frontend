@@ -53,6 +53,7 @@
 
 	<script>
 		$(function() {
+			
 			$('#calc').click(function() {
 				var h = $('#height').val(),  // 設定 h 為身高的變數
 				    w = $('#weight').val(),  // 設定 W 為體重的變數
@@ -92,12 +93,15 @@
 				// 判斷 BMI 是否在標準範圍內
 				function bmistd(n) {
 					if (n < 18.5) {
+						alert('過輕');
 						$('#bmi-std').text('過輕');
 					}
 					else if (n > 24) {
+						alert('過重');
 						$('#bmi-std').text('過重');
 					}
 					else {
+						alert('標準');
 						$('#bmi-std').text('標準');
 					}
 
@@ -111,6 +115,23 @@
 				}
 
 			});
+
+
+
+			// 按下清空按鈕時，清除所有 input 中的內容
+			$('#reset').click(function(){
+				$('#height').val('');
+				$('#weight').val('');
+				$('#age').val('');
+				$('#sex').val(''); 
+				$('#bmi-num').val(''); 
+				$('#body-fat-num').val(''); 
+				$('#bmi-std').val(''); 
+				$('#body-fat-std').val(''); 
+			})
+
+
+
 		});
 	</script>
 
