@@ -61,5 +61,7 @@ Github Page：[體脂率計算器](https://as60160.github.io/Hahow-Jeremy-Fronte
 1. 怎麼設定按鈕的位置，讓他們能呈現在我想要的地方？
     > 已解決。在按鈕 `col-md-12` 中加入 `text-center` ，再微調按鈕之間的 margin 即可。
 2. Reset buttom 要怎麼設定清空內容？
+    > 已解決。用空值取代 input 中的值即可。
 3. 為什麼計算出數值後，無法將數值透過 if 的判斷，回傳到我要的 form ？
+    > 1. 因為沒有呼叫函數。 2. 設定 input 內容必須要用 val() 函數，text() 是用在 HTML 元件內的。
 <br>

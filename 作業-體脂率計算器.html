@@ -86,7 +86,7 @@
 					// 計算並回傳體脂率數值，取到小數點第 2 位
 					var bodyfat = ( 1.2 * bmi ) + ( 0.23 * a -5.4 ) - ( 10.8 * s );
 					$('#body-fat-num').val(formatFloat(bodyfat,2)); 
-					bodyfatstd(s,bodyfat);
+					bodyfatstd(bodyfat);
 
 				}
 
@@ -105,7 +105,7 @@
 				}
 
 				// 判斷 體脂率 是否在標準範圍內
-				function bodyfatstd(s,f) {
+				function bodyfatstd(f) {
 					if (s = 1 && f <= 25) {
 						$('#body-fat-std').val('標準');
 					} else if (s = 1 && f > 25) {
