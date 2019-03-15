@@ -6,7 +6,7 @@ Github Page：[https://as60160.github.io/Hahow-Jeremy-Frontend/](https://as60160
 <br>
 
 
-## 練習 ─ BMI 計算器
+## 課堂練習 ─ BMI 計算器
 使用：Bootstrap、jQuery、RWD <br>
 Github Page：[BMI 計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E7%B7%B4%E7%BF%92-BMI%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
 
@@ -33,7 +33,7 @@ Github Page：[BMI 計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E
 
 
 
-## 作業 ─ 體脂率計算器
+## 課後作業 ─ 體脂率計算器
 使用：Bootstrap、jQuery、RWD <br>
 Github Page：[體脂率計算器](https://as60160.github.io/Hahow-Jeremy-Frontend/%E4%BD%9C%E6%A5%AD-%E9%AB%94%E8%84%82%E7%8E%87%E8%A8%88%E7%AE%97%E5%99%A8.html)<br>
 
