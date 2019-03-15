@@ -106,13 +106,13 @@
 
 				// 判斷 體脂率 是否在標準範圍內
 				function bodyfatstd(g,f) {
-					if (g = 1 && f <= 25) {
+					if (g == 1 && f <= 25) {
 						$('#body-fat-std').val('標準');
-					} else if (g = 1 && f > 25) {
+					} else if (g == 1 && f > 25) {
 						$('#body-fat-std').val('肥胖');
-					} else if (g = 0 && f <= 30) {
+					} else if (g == 0 && f <= 30) {
 						$('#body-fat-std').val('標準');
-					} else if (g = 0 && f > 30) {
+					} else if (g == 0 && f > 30) {
 						$('#body-fat-std').val('肥胖');
 					}
 				}
